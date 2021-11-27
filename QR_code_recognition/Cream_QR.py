@@ -18,26 +18,26 @@ def decodeDisplay(image):
         # 提取二维码数据为字节对象，所以如果我们想在输出图像上
         # 画出来，就需要先将它转换成字符串
         barcodeData = barcode.data.decode("utf-8")
-        barcodeType = barcode.type
+        # barcodeType = barcode.type
 
         # 绘出图像上条形码的数据和条形码类型
-        text = "{} ({})".format(barcodeData, barcodeType)
-        cv2.putText(image, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX,
-                    .5, (0, 0, 125), 2)
+        # text = "{} ({})".format(barcodeData, barcodeType)
+        # cv2.putText(image, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX,
+        #             .5, (0, 0, 125), 2)
 
         # 向终端打印条形码数据和条形码类型
         print(barcodeData)
         # print("[INFO] Found {} barcode: {}".format(barcodeType, barcodeData))
     # return image
-    return barcode
+        return barcode
 
 
 def detect():
     # camera = cv2.VideoCapture(0)
-    cv2.namedWindow("camera", 1)
+    # cv2.namedWindow("camera", 1)
     # 开启ip摄像头
     # admin是账号，admin是密码
-    video = "http://admin:admin@192.168./"  # 此处@后的ipv4 地址需要修改为自己的地址
+    video = "http://admin:admin@192.168.43.1:8081/"  # 此处@后的ipv4 地址需要修改为自己的地址
     capture = cv2.VideoCapture(video)
 
     while True:
