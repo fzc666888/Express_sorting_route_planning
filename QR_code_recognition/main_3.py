@@ -1,3 +1,9 @@
+# -*- coding = utf-8 -*-
+# @Time : 2021/11/10 10:51
+# @Author :CCUT_chao
+# @File : Cream_QR.py
+# @Software : PyCharm
+# 多线程优化处理速度
 
 import cv2
 from pyzbar import pyzbar
